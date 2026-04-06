@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "NanumSquare", sans-serif;
+  background: linear-gradient(135deg, #f4f6f3 0%, #e7efe8 100%);
+  color: #1f2a1f;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.dashboard-wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-card {
+  width: 1320px;
+  padding: 64px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+}
+
+.title-area {
+  margin-bottom: 48px;
+}
+
+.sub-title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #5c7a63;
+  letter-spacing: 0.04em;
+}
+
+.main-title {
+  margin: 0 0 16px;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.desc {
+  margin: 0;
+  font-size: 22px;
+  color: #5d675f;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.project-button {
+  min-height: 280px;
+  padding: 32px;
+  border-radius: 28px;
+  text-decoration: none;
+  background: #ffffff;
+  color: #1f2a1f;
+  border: 1px solid #dbe5dc;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-button:hover {
+  transform: translateY(-6px);
+  border-color: #7ca786;
+  box-shadow: 0 18px 36px rgba(57, 97, 67, 0.14);
+}
+
+.project-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #7aa07f;
+  letter-spacing: 0.08em;
+}
+
+.project-button strong {
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.extra-info {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #dbe5dc;
+}
+
+.extra-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4f6f57;
+  margin-bottom: 12px;
+}
+
+.extra-info p {
+  margin: 4px 0;
+  font-size: 18px;
+  color: #5d675f;
+}
+
+.project-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress-wrap {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #5f6f61;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: #e4ebe4;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #7fa58a;
+  border-radius: 999px;
+}
+
+.arrow {
+  font-size: 28px;
+  align-self: flex-end;
+}

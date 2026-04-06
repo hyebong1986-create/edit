@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>부산 지하차도 조감도 및 보고서 작업</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="app-shell" id="appShell">
+
+      <div class="canvas-wrap" id="canvasWrap">
+        <div class="canvas">
+
+          <header class="hero">
+            <div class="hero-bar"></div>
+            <div class="hero-text">
+              <div class="hero-sub">디자인팀 공통업무 (진행중)</div>
+              <h1 class="hero-title">부산 지하차도 조감도 및 보고서 작업</h1>
+            </div>
+          </header>
+
+          <section class="scope">
+            <div class="section-chip">배경 및 업무범위</div>
+
+            <ul class="scope-list">
+              <li>
+                <img src="img/check.png" alt="" class="check-icon">
+                <span>
+                  <strong>AI를 활용한</strong> 대상지 <strong>현황사진</strong> 및<br>
+                  <strong>조감도 이미지</strong> 생성
+                </span>
+              </li>
+              <li>
+                <img src="img/check.png" alt="" class="check-icon">
+                <span>기획원고 기반 <strong>한글문서 보고서 편집</strong></span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="reference">
+            <div class="section-chip">첨부문서 및 참고자료</div>
+
+            <div class="reference-box">
+              <button class="ref-nav ref-prev" id="refPrev" aria-label="이전 이미지">&#10094;</button>
+
+              <div class="reference-slider" id="referenceSlider">
+                <div class="reference-slide active">
+                  <img src="img/edit1.png" alt="참고자료 1" class="reference-image">
+                </div>
+                <div class="reference-slide">
+                  <img src="img/edit_2.png" alt="참고자료 2" class="reference-image">
+                </div>
+                <div class="reference-slide">
+                  <img src="img/edit_3.png" alt="참고자료 3" class="reference-image">
+                </div>
+              </div>
+
+              <button class="ref-nav ref-next" id="refNext" aria-label="다음 이미지">&#10095;</button>
+
+              <div class="ref-dots" id="refDots">
+                <button class="ref-dot active" data-index="0" aria-label="1번 이미지"></button>
+                <button class="ref-dot" data-index="1" aria-label="2번 이미지"></button>
+                <button class="ref-dot" data-index="2" aria-label="3번 이미지"></button>
+              </div>
+            </div>
+          </section>
+
+          <section class="info-panel">
+            <div class="section-chip">일정계획 및 실행현황</div>
+
+            <div class="info-panel-body">
+              <div class="plan-block">
+                <div class="info-title">
+                  <span class="dot dot-orange"></span>
+                  <span>일정계획</span>
+                </div>
+                <div class="plan-dates">
+                  <p id="planDateStartText">2026. 3. 8.</p>
+                  <p id="planDateEndText">~ 2026. 4월 중순.</p>
+                </div>
+              </div>
+
+              <div class="status-block">
+                <div class="info-title">
+                  <span class="dot dot-green"></span>
+                  <span>실행현황</span>
+                </div>
+
+                <div class="status-card" id="statusCard1">
+                  <div class="status-head">
+                    <div class="people-group" id="peopleGroup1"></div>
+                    <span class="status-percent" id="statusPercent1">100%</span>
+                  </div>
+                  <div class="segbar" id="segbar1"></div>
+                  <p class="status-text" id="statusText1">3D영상셀: 조감도IMG AI 제작</p>
+                </div>
+
+                <div class="status-card status-card-2" id="statusCard2">
+                  <div class="status-head">
+                    <div class="people-group" id="peopleGroup2"></div>
+                    <span class="status-percent" id="statusPercent2">90%</span>
+                  </div>
+                  <div class="segbar" id="segbar2"></div>
+                  <p class="status-text" id="statusText2">편집셀: 보고서 한글편집</p>
+                </div>
+
+                <p class="partner" id="partnerText">협업부서: -----</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="timeline-panel">
+            <div class="timeline-widget">
+              <div class="month-marker-layer" id="monthMarkerLayer"></div>
+              <div class="timeline-scale" id="timelineScale"></div>
+
+              <div class="timeline-board" id="timelineBoard">
+                <div class="planned-range" id="plannedRange"></div>
+
+                <div class="today-line" id="todayLine"></div>
+                <div class="today-label" id="todayLabel">today</div>
+
+                <div class="task-card task-card-1" id="taskCard1">조감 IMG AI 제작</div>
+                <div class="task-card task-card-2" id="taskCard2">보고서 편집</div>
+
+                <div class="scroll-track" id="scrollTrack">
+                  <div class="scroll-thumb" id="scrollThumb"></div>
+                </div>
+
+                <div class="edge-arrow left-edge"></div>
+                <div class="edge-arrow right-edge"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="detail-panel">
+            <div class="detail-divider">
+              <div class="detail-line"></div>
+              <div class="detail-arrow"></div>
+            </div>
+
+            <div class="detail-content">
+              <div class="detail-title">세부일정</div>
+              <div class="detail-list" id="detailList"></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
